@@ -24,6 +24,10 @@ sizes = data['y'].value_counts(sort = True)
 plt.pie(sizes,labels=labels,autopct='%1.1f%%', shadow=True, startangle=270,)
 plt.title('Yes and No categ',size = 12)
 st.pyplot(fig)
+with st.expander("See expla nation"):
+    st.write("""The number of share rooms is always small.\n
+There are  more houses in Brooklyn and Manhattan.\n
+The percentage of shared room is smallest""")
 st.markdown(' we saw that out of **more than 44,000** people,**less than 5,000** people accepted the business, and the success rate was 11.3%')
 st.write('')
 st.write('')
