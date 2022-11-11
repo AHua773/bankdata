@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 data= pd.read_csv('bank-additional-full.csv')
+from PIL import Image
+image = Image.open('bank.jpg')
+st.image(image, caption='bank.jpg',use_column_width=True)
+st.subheader('Final  Project  from   Chuanyue Liu   and   Houhua Zhang')
 st.title('Bank Marketing Campaigns')
 st.header('Data Analytics')
 st.markdown('**The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed.**')
@@ -124,6 +128,11 @@ ax[1].set_title('Distribution of jobs and deposit')
 ax[1].set_xlabel('job')  
 ax[1].set_ylabel('Number of clients')
 st.pyplot(fig)
+
+with st.expander("See expla nation"):
+    st.write("""we saw that out of **more than 44,000** people,**less than 5,000** people accepted the business, and the success rate was 11.3%""")
+    image = Image.open('data.png')
+    st.image(image, caption='data.png',use_column_width=True)
 
 
 st.header('Q2: ')
