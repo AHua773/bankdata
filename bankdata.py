@@ -15,37 +15,6 @@ st.markdown('**Number of Attributes: 20 + output attribute.**')
 st.balloons()
 
 
-st.subheader('These graphs are made to conducted a separate analysis of each influencing factor, discussing the impact of its variables on success')
-fig,ax= plt.subplots(4,1,figsize=(10,60))
-temp_1 = pd.DataFrame()
-temp_1['No_deposit'] = data[data['y'] == 'no']['job'].value_counts()
-temp_1['Yes_deposit'] = data[data['y'] == 'yes']['job'].value_counts()    
-ax[0].set_ylabel('Number of clients')
-ax[0].set_title('Distribution of {} and deposit'.format('job'))
-temp_1.plot.bar(ax=ax[0])
-
-temp_2 = pd.DataFrame()
-temp_2['No_deposit'] = data[data['y'] == 'no']['day_of_week'].value_counts()
-temp_2['Yes_deposit'] = data[data['y'] == 'yes']['day_of_week'].value_counts()    
-plt.ylabel('Number of clients')
-ax[1].set_title('Distribution of {} and deposit'.format('day_of_week'))
-temp_2.plot.bar(ax=ax[1])
-
-temp_3 = pd.DataFrame()
-temp_3['No_deposit'] = data[data['y'] == 'no']['education'].value_counts()
-temp_3['Yes_deposit'] = data[data['y'] == 'yes']['education'].value_counts()    
-plt.ylabel('Number of clients')
-ax[2].set_title('Distribution of {} and deposit'.format('education'))
-temp_3.plot.bar(ax=ax[2])
-
-temp_4= pd.DataFrame()
-temp_4['No_deposit'] = data[data['y'] == 'no']['cons_price_idx'].value_counts()
-temp_4['Yes_deposit'] = data[data['y'] == 'yes']['cons_price_idx'].value_counts() 
- 
-ax[3].set_ylabel('Number of clients')
-ax[3].set_title('Distribution of {} and deposit'.format('cons_price_idx'))
-temp_4.plot.bar(ax=ax[3])
-st.pyplot(fig)
 
 
 
@@ -133,7 +102,7 @@ st.pyplot(fig)
 
 
 with st.expander("See explanation"):
-    st.write("""There is a balance about the people who do different jobs most and least likely to agree to deposit on a day of a week. We can see that many jobs don’t want to deposit on Mon, which maybe is related that Mon is the first day after weekends, we don’t want to work.\n 
+    st.write("""There is a chart about the people who do different jobs most and least likely to agree to deposit on a day of a week. We can see that many jobs don’t want to deposit on Mon, which maybe is related that Mon is the first day after weekends, we don’t want to work.\n 
 In terms of salary and job freedom, services, blue-collar, technician, student and unknown are who get relatively low pay and work freedom because they work for someone else as an employed person. They are most likely to agree to deposit on Friday. We suspect this has something to do with the upcoming holidays.\n 
 We think admin, retired, self-employed, housemaid, unemployed have the same point which is they have a relatively stable job, and they are most likely to agree to deposit on Wednesday.\n
 And management and entrepreneur who have less pressure to earn money are likely to agree to deposit on Tuesday.
@@ -163,7 +132,7 @@ ax.set_ylabel('Number of clients')
 st.pyplot(fig)
 
 
-st.markdown('Then you can see there is an error, the reason why it happens is that we want to do a slider to change the value of cpi, but we found it seems that the slider’s exact value is at most two decimal places, but the data has three decimal places. However, when we rounded the data, we reduced them to a decimal place. Even if we limit its value between 90 and 100, it just only has twenty more values. So now we use the slider with integer to find the right value easily. Next time we will correct the mistake.')
+st.markdown('If you see there is an error, the reason why it happens is that we want to do a slider to change the value of cpi, but we found it seems that the slider’s exact value is at most two decimal places, but the data has three decimal places. However, when we rounded the data, we reduced them to a decimal place. Even if we limit its value between 90 and 100, it just only has twenty more values. So now we use the slider with integer to find the right value easily. Next time we will correct the mistake.')
 fig, ax = plt.subplots()
 index = st.sidebar.slider('cons_price_idx', 92.20, 94.77)
 for g in data.cons_price_idx: 
