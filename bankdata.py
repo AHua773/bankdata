@@ -162,7 +162,7 @@ st.pyplot(fig)
 
 
 fig, ax = plt.subplots()
-index = st.sidebar.slider('cons_price_idx', 90.00, 100.00)
+index = st.sidebar.slider('cons_price_idx', 92.20, 100.00)
 for g in data.cons_price_idx: 
     if index==g:
         q=index
