@@ -8,7 +8,7 @@ st.markdown('**The data is related with direct marketing campaigns of a Portugue
 st.write(data)
 st.markdown('**Number of Instances: 41188** ') 
 st.markdown('**Number of Attributes: 20 + output attribute.**')
-
+st.balloons()
 
 
 st.subheader('**These graphs are made to conducted a separate analysis of each influencing factor, discussing the impact of its variables on success**')
