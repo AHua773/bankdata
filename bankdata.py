@@ -90,6 +90,7 @@ for o in data.education:
         pass
 data_forms=data[data.education==p][data.day_of_week==n][data.job == l]
 st.header('')
+st.markdown('**This is a table where data can be filtered by job date and education**')
 st.write(data_forms)
 
 
