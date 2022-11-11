@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 data= pd.read_csv('bank-additional-full.csv')
+image = Image.open('bank.jpg')
+st.image(image, caption='bank.jpg',use_column_width=True)
 st.title('Bank Marketing Campaigns')
 st.header('Data Analytics')
 st.markdown('**The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed.**')
