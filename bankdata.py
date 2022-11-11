@@ -132,7 +132,7 @@ st.pyplot(fig)
 with st.expander("See expla nation"):
     st.write("""we saw that out of **more than 44,000** people,**less than 5,000** people accepted the business, and the success rate was 11.3%""")
     image = Image.open('data.png')
-    st.image(image, caption='data.png',use_column_width=True)
+    st.image("data.png",use_column_width=True)
 
 
 st.header('Q2: ')
