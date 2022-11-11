@@ -152,7 +152,7 @@ for c in data.education:
     else:
         pass
 fig, ax = plt.subplots()
-data_education_yes = data[data.education == h]
+data_education_yes = data[data.education == h][data['y'] == 'yes']
 data_education_yes_group = data_education_yes.groupby('cons_price_idx')
 d3 = data_education_yes_group.y.value_counts()
 d3.plot(ax=ax,figsize=(20,10))
