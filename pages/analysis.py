@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 data= pd.read_csv('bank-additional-full.csv')
+from PIL import Image
 image = Image.open('bank.jpg')
 st.image(image, caption='bank.jpg',use_column_width=True)
 st.title('Bank Marketing Campaigns')
