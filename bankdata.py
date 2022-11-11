@@ -175,3 +175,8 @@ data_cpi_yes_group = data_cpi_yes.groupby('education')
 d4=data_cpi_yes_group.y.value_counts()
 d4.plot(ax=ax,figsize=(20,10))
 st.pyplot(fig)
+st.markdown('Then you can see there is an error, the reason why it happens is that we want to do a slider to change the value of cpi, but we found it seems that the slider’s exact value is at most two decimal places, but the data has three decimal places. However, when we rounded the data, we reduced them to a decimal place. Even if we limit its value between 90 and 100, it just only has twenty more values. So now we use the slider with integer to find the right value easily. Next time we will correct the mistake.')
+
+with st.expander("See explanation"):
+    st.write("""According to the chart, we can see that different levels of education have a significant impact on the impact of CPI on whether people agree to save money and vice versa
+""")
