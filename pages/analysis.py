@@ -5,6 +5,7 @@ data= pd.read_csv('bank-additional-full.csv')
 from PIL import Image
 image = Image.open('bank.jpg')
 st.image(image, caption='bank.jpg',use_column_width=True)
+st.header('Final Project from Chuanyue Liu and Houhua Zhang')
 st.title('Bank Marketing Campaigns')
 st.header('Data Analytics')
 st.markdown('**The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed.**')
