@@ -90,7 +90,7 @@ for o in data.education:
         pass
 data_forms=data[data.education==p][data.day_of_week==n][data.job == l]
 st.header('')
-st.markdown('**This is a table where data can be filtered by job day of week and education**')
+st.markdown('**This is a table where data can be filtered by job, day of week and education**')
 st.write(data_forms)
 
 
@@ -131,7 +131,7 @@ ax[1].set_ylabel('Number of clients')
 st.pyplot(fig)
 
 
-with st.expander("See expla nation"):
+with st.expander("See explanation"):
     st.write("""There is a balance about the people who do different jobs most and least likely to agree to deposit on a day of a week. We can see that many jobs don’t want to deposit on Mon, which maybe is related that Mon is the first day after weekends, we don’t want to work.\n 
 In terms of salary and job freedom, services, blue-collar, technician, student and unknown are who get relatively low pay and work freedom because they work for someone else as an employed person. They are most likely to agree to deposit on Friday. We suspect this has something to do with the upcoming holidays.\n 
 We think admin, retired, self-employed, housemaid, unemployed have the same point which is they have a relatively stable job, and they are most likely to agree to deposit on Wednesday.\n
@@ -169,7 +169,7 @@ for g in data.cons_price_idx:
         q=index
     else:
         pass
-data_cpi_yes= data[data.cons_price_idx == q]
+data_cpi_yes= data[data.cons_price_idx == q][data['y'] == 'yes']
 data_cpi_yes_group = data_cpi_yes.groupby('education')
 d4=data_cpi_yes_group.y.value_counts()
 d4.plot(ax=ax,figsize=(20,10))
