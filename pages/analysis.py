@@ -26,7 +26,7 @@ plt.title('Yes and No categ',size = 12)
 st.pyplot(fig)
 with st.expander("See expla nation"):
     st.write("""we saw that out of **more than 44,000** people,**less than 5,000** people accepted the business, and the success rate was 11.3%""")
-st.markdown(' we saw that out of **more than 44,000** people,**less than 5,000** people accepted the business, and the success rate was 11.3%')
+
 st.write('')
 st.write('')
 
