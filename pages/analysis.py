@@ -62,8 +62,3 @@ ax[3].set_ylabel('Number of clients')
 ax[3].set_title('Distribution of {} and deposit'.format('cons_price_idx'))
 temp_4.plot.bar(ax=ax[3])
 st.pyplot(fig)
-
-from PIL import Image
-image = Image.open('dataimage1.png')
-st.markdown('**The graph to study the interaction between the various variables**')
-st.image(image, caption='dataimage1.png',use_column_width=True)
