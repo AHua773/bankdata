@@ -58,12 +58,13 @@ st.markdown('The education level of customers and CPI are the same as them; At t
 job_label= st.sidebar.radio(
      'Select job',
      ('management','services','admin.','blue-collar','entrepreneur','housemaid','retired','self-employed','student','technician','unemployed','unknown'))  
-education_label= st.sidebar.radio(
-     'Select education',
-     ("basic.4y","basic.6y","basic.9y","high.school","illiterate","professional.course","university.degree","unknown"))
 day_of_week_label= st.sidebar.radio(
      'Select day',
      ('mon','tue','wed','thu','fri'))
+education_label= st.sidebar.radio(
+     'Select education',
+     ("basic.4y","basic.6y","basic.9y","high.school","illiterate","professional.course","university.degree","unknown"))
+
 
 
 
