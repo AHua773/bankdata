@@ -11,7 +11,7 @@ st.markdown('**Number of Attributes: 20 + output attribute.**')
 st.balloons()
 
 
-st.subheader('**These graphs are made to conducted a separate analysis of each influencing factor, discussing the impact of its variables on success**')
+st.subheader('These graphs are made to conducted a separate analysis of each influencing factor, discussing the impact of its variables on success')
 fig,ax= plt.subplots(4,1,figsize=(10,60))
 temp_1 = pd.DataFrame()
 temp_1['No_deposit'] = data[data['y'] == 'no']['job'].value_counts()
