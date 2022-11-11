@@ -130,11 +130,12 @@ ax[1].set_ylabel('Number of clients')
 st.pyplot(fig)
 
 
-image = Image.open('data1.png')
-st.image("data1.png")
-
 with st.expander("See expla nation"):
-    st.write("""we saw that out of **more than 44,000** people,**less than 5,000** people accepted the business, and the success rate was 11.3%""")
+    st.write("""There is a balance about the people who do different jobs most and least likely to agree to deposit on a day of a week. We can see that many jobs don’t want to deposit on Mon, which maybe is related that Mon is the first day after weekends, we don’t want to work./n 
+In terms of salary and job freedom, services, blue-collar, technician, student and unknown are who get relatively low pay and work freedom because they work for someone else as an employed person. They are most likely to agree to deposit on Friday. We suspect this has something to do with the upcoming holidays./n 
+We think admin, retired, self-employed, housemaid, unemployed have the same point which is they have a relatively stable job, and they are most likely to agree to deposit on Wednesday.
+And management and entrepreneur who have less pressure to earn money are likely to agree to deposit on Tuesday.
+""")
     image = Image.open('data1.png')
     st.image("data1.png")
 
