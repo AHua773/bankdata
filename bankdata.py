@@ -130,13 +130,13 @@ ax[1].set_ylabel('Number of clients')
 st.pyplot(fig)
 
 
-image = Image.open('data.png')
-st.image("data.png")
+image = Image.open('data1.png')
+st.image("data1.png")
 
 with st.expander("See expla nation"):
     st.write("""we saw that out of **more than 44,000** people,**less than 5,000** people accepted the business, and the success rate was 11.3%""")
-    image = Image.open('data.png')
-    st.image("https://static.streamlit.io/examples/dice.jpg")
+    image = Image.open('data1.png')
+    st.image("data1.png")
 
 
 st.header('Q2: ')
